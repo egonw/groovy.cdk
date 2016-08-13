@@ -1,5 +1,5 @@
  import org.openscience.cdk.*;
 
-butane = new Molecule();
+butane = new AtomContainer();
 butane.setID("cdkbook000000001")
 print "ID: " + butane.getID()

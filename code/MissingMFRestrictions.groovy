@@ -2,19 +2,18 @@ import org.openscience.cdk.interfaces.*;
 import org.openscience.cdk.*;
 import org.openscience.cdk.formula.*;
 import org.openscience.cdk.formula.rules.*;
-import org.openscience.cdk.nonotify.*;
+import org.openscience.cdk.silent.*;
 import org.openscience.cdk.tools.manipulator.*;
-import org.openscience.cdk.config.IsotopeFactory;
+import org.openscience.cdk.config.Isotopes;
 
-ifac = ifac = IsotopeFactory.getInstance(
-  NoNotificationChemObjectBuilder.getInstance()
-)
+ifac = Isotopes.getInstance()
 tool = new MassToFormulaTool(
-  NoNotificationChemObjectBuilder.getInstance()
+  SilentChemObjectBuilder.getInstance()
 )
 rules = new ArrayList<IRule>();
 restriction  = new ElementRule();
-MolecularFormulaRange range = new MolecularFormulaRange();
+MolecularFormulaRange range =
+  new MolecularFormulaRange();
 range.addIsotope( ifac.getMajorIsotope("C"), 8, 20);
 range.addIsotope( ifac.getMajorIsotope("H"), 0, 20);
 range.addIsotope( ifac.getMajorIsotope("O"), 0, 1);

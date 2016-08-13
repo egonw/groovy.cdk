@@ -9,7 +9,7 @@ iterator = new IteratingPCCompoundXMLReader(
   DefaultChemObjectBuilder.getInstance()
 )
 while (iterator.hasNext()) {
-  IMolecule mol = iterator.next()
+  IAtomContainer mol = iterator.next()
   formula = MolecularFormulaManipulator
     .getMolecularFormula(mol)
   println MolecularFormulaManipulator.getString(formula)

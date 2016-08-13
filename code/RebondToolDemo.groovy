@@ -4,7 +4,7 @@ import org.openscience.cdk.config.*;
 import org.openscience.cdk.graph.rebond.*;
 import javax.vecmath.Point3d;
 
-methane = new Molecule();
+methane = new AtomContainer();
 methane.addAtom(new Atom("C", new Point3d(0.0, 0.0, 0.0)));
 methane.addAtom(new Atom("H", new Point3d(0.6, 0.6, 0.6)));
 methane.addAtom(new Atom("H", new Point3d(-0.6, -0.6, 0.6)));

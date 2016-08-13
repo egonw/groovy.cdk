@@ -5,7 +5,7 @@ import org.openscience.cdk.tools.manipulator.*;
 import org.openscience.cdk.*;
 
 IChemObjectBuilder builder = DefaultChemObjectBuilder.getInstance();
-IMolecule adenine = builder.newInstance(IMolecule.class);
+IAtomContainer adenine = builder.newInstance(IAtomContainer.class);
 IAtom a1 = builder.newInstance(IAtom.class,"N");
 adenine.addAtom(a1);
 IAtom a2 = builder.newInstance(IAtom.class,"N");
@@ -71,9 +71,10 @@ adenine.addBond(b16);
 
 smilesGenerator = new SmilesGenerator();
 
-AtomContainerManipulator.percieveAtomTypesAndConfigureAtoms(
-  adenine
-);
+AtomContainerManipulator
+  .percieveAtomTypesAndConfigureAtoms(
+    adenine
+  );
 tautomerGenerator = new InChITautomerGenerator();
 tautomers = tautomerGenerator.getTautomers(adenine)
 for (tautomer in tautomers) {

@@ -3,8 +3,8 @@
 
 butane = MoleculeFactory.makeAlkane(4);
 ccc = MoleculeFactory.makeAlkane(3);
-hits = UniversalIsomorphismTester
-  .getSubgraphAtomsMaps(
+isomorphismTester = new UniversalIsomorphismTester()
+hits = isomorphismTester.getSubgraphAtomsMaps(
      butane, ccc
   )
 println "Number of hits: " + hits.size

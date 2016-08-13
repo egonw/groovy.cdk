@@ -12,15 +12,16 @@ import org.openscience.cdk.renderer.generators.*;
 import org.openscience.cdk.renderer.visitor.*;
 import org.openscience.cdk.templates.*;
 import org.openscience.cdk.renderer.generators.BasicSceneGenerator.Margin;
+import org.openscience.cdk.renderer.generators.BasicSceneGenerator.ZoomFactor;
 
 
 
 
-int WIDTH = 220;
-int HEIGHT = 220;
+int WIDTH = 600;
+int HEIGHT = 600;
 
   IChemObjectBuilder builder = DefaultChemObjectBuilder.getInstance();
-  IMolecule mol = builder.newInstance(IMolecule.class);
+  IAtomContainer mol = builder.newInstance(IAtomContainer.class);
   IAtom a1 = builder.newInstance(IAtom.class,"N");
   a1.setFormalCharge(0);
   a1.setPoint2d(new Point2d(4.6783, 0.1497));
@@ -122,6 +123,7 @@ renderer.setup(adenine, drawArea);
 
 model = renderer.getRenderer2DModel();
 model.set(Margin.class, (double)0.1);
+model.set(ZoomFactor.class, (double)3.0);
 
 // paint the background
 Graphics2D g2 = (Graphics2D)image.getGraphics();

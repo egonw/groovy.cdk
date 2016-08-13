@@ -11,4 +11,4 @@ moleculeSet = ConnectivityChecker.partitionIntoMolecules(
   atomCon
 );
 println "Number of isolated graphs: " +
-  moleculeSet.moleculeCount
+  moleculeSet.atomContainerCount

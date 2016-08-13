@@ -2,12 +2,12 @@
  import org.openscience.cdk.isomorphism.*;
 butane = MoleculeFactory.makeAlkane(4)
 ccc = MoleculeFactory.makeAlkane(3)
-hits = UniversalIsomorphismTester
-  .getOverlaps(
+isomorphismTester = new UniversalIsomorphismTester()
+hits = isomorphismTester.getOverlaps(
      butane, ccc
   )
 println "Number of hits: " + hits.size
 hits.each { substructure ->
-  println "Substructure in Molecule:"
+  println "Substructure in AtomContainer:"
   println "  #atoms: " + substructure.atomCount
 }

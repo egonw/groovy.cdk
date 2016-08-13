@@ -6,7 +6,7 @@ import org.openscience.cdk.tools.*;
 import org.openscience.cdk.tools.manipulator.*;
 import javax.vecmath.Point3d;
 
-molecule = new Molecule();
+molecule = new AtomContainer();
 carbon = new Atom(Elements.CARBON);
 carbon.setImplicitHydrogenCount(4);
 molecule.addAtom(carbon);

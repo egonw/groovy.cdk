@@ -4,6 +4,6 @@ import org.openscience.cdk.*;
 hydrogen = new Atom("H")
 radicalElectron =
   new SingleElectron(hydrogen)
-hydrogenRadical = new Molecule()
+hydrogenRadical = new AtomContainer()
 hydrogenRadical.addAtom(hydrogen)
 hydrogenRadical.addSingleElectron(radicalElectron)

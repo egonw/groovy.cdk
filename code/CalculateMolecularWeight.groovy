@@ -1,15 +1,15 @@
 import org.openscience.cdk.interfaces.*;
-import org.openscience.cdk.nonotify.NoNotificationChemObjectBuilder;
-import org.openscience.cdk.config.IsotopeFactory;
+import org.openscience.cdk.silent.SilentChemObjectBuilder;
+import org.openscience.cdk.config.Isotopes;
 
-IChemObjectBuilder builder = NoNotificationChemObjectBuilder.getInstance();
-IMolecule molecule = builder.newInstance(IMolecule.class);
+IChemObjectBuilder builder = SilentChemObjectBuilder.getInstance();
+IAtomContainer molecule = builder.newInstance(IAtomContainer.class);
 molecule.addAtom(builder.newInstance(IAtom.class, "C"));
 molecule.addAtom(builder.newInstance(IAtom.class, "H"));
 molecule.addAtom(builder.newInstance(IAtom.class, "H"));
 molecule.addAtom(builder.newInstance(IAtom.class, "H"));
 molecule.addAtom(builder.newInstance(IAtom.class, "H"));
-IsotopeFactory isotopeInfo = IsotopeFactory.getInstance(builder);
+Isotopes isotopeInfo = Isotopes.getInstance();
 molWeight = 0.0
 for (atom in molecule.atoms()) {
   molWeight += isotopeInfo.getNaturalMass(atom)

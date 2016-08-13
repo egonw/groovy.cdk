@@ -1,9 +1,8 @@
 import org.openscience.cdk.interfaces.*;
-import org.openscience.cdk.nonotify.NoNotificationChemObjectBuilder;
-import org.openscience.cdk.config.IsotopeFactory;
+import org.openscience.cdk.silent.SilentChemObjectBuilder;
 
-IChemObjectBuilder builder = NoNotificationChemObjectBuilder.getInstance();
-IMolecule molecule = builder.newInstance(IMolecule.class);
+IChemObjectBuilder builder = SilentChemObjectBuilder.getInstance();
+IAtomContainer molecule = builder.newInstance(IAtomContainer.class);
 molecule.addAtom(builder.newInstance(IAtom.class, "C"));
 molecule.getAtom(0).setCharge(0.1);
 molecule.addAtom(builder.newInstance(IAtom.class, "O"));

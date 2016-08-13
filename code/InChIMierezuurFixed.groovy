@@ -3,7 +3,7 @@ import org.openscience.cdk.*;
 import org.openscience.cdk.inchi.*;
 import net.sf.jniinchi.INCHI_RET;
 
-mierezuur = new Molecule();
+mierezuur = new AtomContainer();
 atom1 = new Atom("O")
 atom2 = new Atom("C")
 atom3 = new Atom("O")
@@ -16,6 +16,8 @@ mierezuur.addBond(bond1)
 mierezuur.addBond(bond2)
 
 factory = InChIGeneratorFactory.getInstance();
-generator = factory.getInChIGenerator(mierezuur, "FixedH");
+generator = factory.getInChIGenerator(
+  mierezuur, "FixedH"
+);
 if (generator.getReturnStatus() == INCHI_RET.OKAY)
 print generator.getInchi()

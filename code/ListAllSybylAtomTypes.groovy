@@ -1,12 +1,12 @@
 import org.openscience.cdk.interfaces.*;
 import org.openscience.cdk.config.*;
-import org.openscience.cdk.nonotify.*;
+import org.openscience.cdk.silent.*;
 import org.openscience.cdk.*;
 import java.util.Arrays;
 
 factory = AtomTypeFactory.getInstance(
   "org/openscience/cdk/dict/data/sybyl-atom-types.owl",
-  NoNotificationChemObjectBuilder.getInstance()
+  SilentChemObjectBuilder.getInstance()
 );
 output = new File("../sybylatomtypelist.tex")
 output.text = ""

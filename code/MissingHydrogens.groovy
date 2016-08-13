@@ -6,7 +6,7 @@ import org.openscience.cdk.tools.*;
 import org.openscience.cdk.tools.manipulator.*;
 import javax.vecmath.Point3d;
 
-molecule = new Molecule();
+molecule = new AtomContainer();
 newAtom = new Atom(Elements.CARBON);
 molecule.addAtom(newAtom);
 matcher = CDKAtomTypeMatcher.getInstance(

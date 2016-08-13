@@ -10,7 +10,7 @@ reader = new MDLV2000Reader(
   Mode.STRICT
 );
 try {
-water = reader.read(new Molecule());
+water = reader.read(new AtomContainer());
 println "atom count: $water.atomCount"
 } catch (CDKException exception) {
  println exception.getMessage()

@@ -1,5 +1,5 @@
 import java.net.UnknownHostException;
-import org.openscience.cdk.Molecule;
+import org.openscience.cdk.silent.*;
 import org.openscience.cdk.io.*;
 import org.openscience.cdk.io.listener.*;
 
@@ -15,7 +15,7 @@ reader = new PCCompoundXMLReader(
     "summary.cgi?cid=$cid&disopt=SaveXML"
   ).newInputStream()
 )
-mol = reader.read(new Molecule())
+mol = reader.read(new AtomContainer())
 stringWriter = new StringWriter();
 CDKSourceCodeWriter writer =
   new CDKSourceCodeWriter(stringWriter);
@@ -31,5 +31,5 @@ writer.write(mol);
 writer.close();
 println stringWriter.toString();
 } catch (UnknownHostException exception) {
-  println "FIXME: compile without internet connection"
+  println "FIXME: compiled without internet connection"
 }

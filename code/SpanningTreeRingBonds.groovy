@@ -9,8 +9,8 @@ reader = new MDLV2000Reader(
   new File("data/azulene.mol").newReader(),
   Mode.STRICT
 );
-azulene = reader.read(new Molecule());
-ethane = new Molecule();
+azulene = reader.read(new AtomContainer());
+ethane = new AtomContainer();
 ethane.addAtom(new Atom("C"));
 ethane.addAtom(new Atom("C"));
 ethane.addBond(0, 1, IBond.Order.SINGLE);

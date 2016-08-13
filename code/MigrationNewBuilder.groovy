@@ -3,8 +3,8 @@ import org.openscience.cdk.*;
 
 IChemObjectBuilder builder =
   DefaultChemObjectBuilder.getInstance();
-IMolecule molecule = builder.newInstance(
-  IMolecule.class
+IAtomContainer molecule = builder.newInstance(
+  IAtomContainer.class
 );
 molecule.addAtom(
   builder.newInstance(IAtom.class, "C")

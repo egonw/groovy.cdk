@@ -14,6 +14,7 @@ import org.openscience.cdk.renderer.font.*;
 import org.openscience.cdk.renderer.generators.*;
 import org.openscience.cdk.renderer.visitor.*;
 import org.openscience.cdk.renderer.generators.BasicSceneGenerator.Margin;
+import org.openscience.cdk.renderer.generators.BasicSceneGenerator.ZoomFactor;
 import org.openscience.cdk.qsar.descriptors.molecular.*;
 import org.openscience.cdk.qsar.result.*;
 
@@ -33,8 +34,8 @@ for (i in 0..(benzene.atomCount-1)) {
     "" + numbers[i]
   )
 }
-int WIDTH = 220;
-int HEIGHT = 220;
+int WIDTH = 600;
+int HEIGHT = 600;
 
 // the draw area and the image should be the same size
 Rectangle drawArea = new Rectangle(WIDTH, HEIGHT);
@@ -63,6 +64,7 @@ renderer.setup(benzene, drawArea);
 
 model = renderer.getRenderer2DModel();
 model.set(Margin.class, (double)0.1);
+model.set(ZoomFactor.class, (double)3.0);
 
 // paint the background
 Graphics2D g2 = (Graphics2D)image.getGraphics();

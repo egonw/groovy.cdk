@@ -19,8 +19,8 @@ adder.addImplicitHydrogens(benzene)
 AtomContainerManipulator.convertImplicitToExplicitHydrogens(benzene)
 descriptor = new XLogPDescriptor()
 println "LogP of oxazone: " +
-  ((DoubleResult)descriptor.calculate(oxazone).getValue())
+  ((DoubleResult)descriptor.calculate(oxazone).value)
   .doubleValue()
 println "LogP of benzene: " +
-  ((DoubleResult) descriptor.calculate(benzene).getValue())
+  ((DoubleResult)descriptor.calculate(benzene).value)
   .doubleValue()

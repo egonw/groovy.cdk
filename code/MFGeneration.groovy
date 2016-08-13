@@ -11,7 +11,7 @@ reader = new MDLV2000Reader(
   new File("data/azulene.mol").newReader(),
   Mode.STRICT
 );
-azulene = reader.read(new Molecule())
+azulene = reader.read(new AtomContainer())
 AtomContainerManipulator.percieveAtomTypesAndConfigureAtoms(azulene);
 adder = CDKHydrogenAdder.getInstance(
   DefaultChemObjectBuilder.getInstance()

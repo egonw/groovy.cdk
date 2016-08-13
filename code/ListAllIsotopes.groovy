@@ -1,12 +1,10 @@
 import org.openscience.cdk.interfaces.*;
 import org.openscience.cdk.config.*;
-import org.openscience.cdk.nonotify.*;
+import org.openscience.cdk.silent.*;
 import org.openscience.cdk.*;
 import java.util.Arrays;
 
-isofac = IsotopeFactory.getInstance(
-  NoNotificationChemObjectBuilder.getInstance()
-);
+isofac = Isotopes.getInstance();
 output = new File("../isotopelist.tex")
 output.text = ""
 

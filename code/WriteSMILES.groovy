@@ -5,12 +5,14 @@ import org.openscience.cdk.templates.*;
 import org.openscience.cdk.tools.*;
 import org.openscience.cdk.tools.manipulator.*;
 import org.openscience.cdk.aromaticity.*;
-generator = new SmilesGenerator()
 mol = MoleculeFactory.makePhenylAmine()
 AtomContainerManipulator.percieveAtomTypesAndConfigureAtoms(mol);
 CDKHueckelAromaticityDetector.detectAromaticity(mol);
+hAdder = CDKHydrogenAdder.getInstance(mol.getBuilder())
+hAdder.addImplicitHydrogens(mol)
+generator = SmilesGenerator.generic()
 smiles = generator.createSMILES(mol)
 println "Ph-NH2 -> $smiles"
-generator.setUseAromaticityFlag(true);
+generator = SmilesGenerator.generic().aromatic()
 smiles = generator.createSMILES(mol)
 println "Ph-NH2 -> $smiles"

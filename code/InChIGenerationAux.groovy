@@ -9,5 +9,5 @@ ethanol.addAtom(new Atom("C"))
 ethanol.addAtom(new Atom("O"))
 
 factory = InChIGeneratorFactory.getInstance();
-generator = factory.getInChIGenerator(ethanol, "")
+generator = factory.getInChIGenerator(ethanol)
 print generator.getAuxInfo()

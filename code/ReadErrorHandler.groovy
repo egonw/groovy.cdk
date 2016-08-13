@@ -37,4 +37,4 @@ reader = new MDLV2000Reader(
   Mode.RELAXED
 );
 reader.setErrorHandler(new ErrorHandler());
-water = reader.read(new Molecule());
+water = reader.read(new AtomContainer());

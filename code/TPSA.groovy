@@ -19,8 +19,8 @@ adder.addImplicitHydrogens(benzene)
 AtomContainerManipulator.convertImplicitToExplicitHydrogens(benzene)
 descriptor = new TPSADescriptor()
 println "TPSA of oxazone: " +
-  ((DoubleResult)descriptor.calculate(oxazone).getValue())
+  ((DoubleResult)descriptor.calculate(oxazone).value)
   .doubleValue()
 println "TPSA of benzene: " +
-  ((DoubleResult) descriptor.calculate(benzene).getValue())
+  ((DoubleResult)descriptor.calculate(benzene).value)
   .doubleValue()

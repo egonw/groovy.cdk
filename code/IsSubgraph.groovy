@@ -3,11 +3,12 @@
 
 butane = MoleculeFactory.makeAlkane(4);
 propane = MoleculeFactory.makeAlkane(3);
+isomorphismTester = new UniversalIsomorphismTester()
 println "Propane part of Butane: " +
-  UniversalIsomorphismTester.isSubgraph(
+  isomorphismTester.isSubgraph(
     butane, propane
   )
 println "Butane part of Propane: " +
-  UniversalIsomorphismTester.isSubgraph(
+  isomorphismTester.isSubgraph(
     propane, butane
   )

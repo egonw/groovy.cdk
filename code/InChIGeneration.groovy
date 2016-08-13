@@ -3,7 +3,7 @@ import org.openscience.cdk.*;
 import org.openscience.cdk.inchi.*;
 import net.sf.jniinchi.INCHI_RET;
 
-methane = new Molecule();
+methane = new AtomContainer();
 atom1 = new Atom("C")
 methane.addAtom(atom1)
 

@@ -1,7 +1,7 @@
 import java.net.UnknownHostException;
 import org.openscience.cdk.*
 import org.openscience.cdk.io.*
-import org.openscience.cdk.nonotify.*
+import org.openscience.cdk.silent.*
 import org.openscience.cdk.tools.manipulator.*
 
 
@@ -14,7 +14,7 @@ String bf3 = "4\n" +
 reader = new XYZReader(
   new StringReader(bf3)
 )
-chemfile = reader.read(new NNChemFile())
+chemfile = reader.read(new ChemFile())
 mol = ChemFileManipulator.getAllAtomContainers(chemfile)
   .get(0)
 println "Atom count: $mol.atomCount"

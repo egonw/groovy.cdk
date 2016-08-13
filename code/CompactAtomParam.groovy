@@ -14,18 +14,19 @@ import org.openscience.cdk.renderer.generators.BasicAtomGenerator.CompactAtom;
 import org.openscience.cdk.renderer.generators.BasicAtomGenerator.CompactShape;
 import org.openscience.cdk.renderer.generators.BasicAtomGenerator.Shape;
 import org.openscience.cdk.renderer.generators.BasicSceneGenerator.Margin;
+import org.openscience.cdk.renderer.generators.BasicSceneGenerator.ZoomFactor;
 
 
 
 
-int WIDTH = 200;
-int HEIGHT = 200;
+int WIDTH = 600;
+int HEIGHT = 600;
 // the draw area and the image should be the same size
 Rectangle drawArea = new Rectangle(WIDTH, HEIGHT);
 Image image = new BufferedImage(
   WIDTH, HEIGHT, BufferedImage.TYPE_INT_RGB
 );
-IMolecule triazole = MoleculeFactory.make123Triazole();
+IAtomContainer triazole = MoleculeFactory.make123Triazole();
 StructureDiagramGenerator sdg = new StructureDiagramGenerator();
 sdg.setMolecule(triazole);
 sdg.generateCoordinates();
@@ -42,6 +43,7 @@ model = renderer.getRenderer2DModel();
 model.set(Margin.class, (double)0.0);
 model.set(CompactAtom.class, true);
 model.set(CompactShape.class, Shape.OVAL);
+model.set(ZoomFactor.class, (double)3.0);
 // the call to 'setup' only needs to be done on the first paint
 renderer.setup(triazole, drawArea);
 // paint the background

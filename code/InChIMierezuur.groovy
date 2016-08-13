@@ -3,7 +3,7 @@ import org.openscience.cdk.*;
 import org.openscience.cdk.inchi.*;
 import net.sf.jniinchi.INCHI_RET;
 
-mierezuur = new Molecule();
+mierezuur = new AtomContainer();
 atom1 = new Atom("O")
 atom2 = new Atom("C")
 atom3 = new Atom("O")

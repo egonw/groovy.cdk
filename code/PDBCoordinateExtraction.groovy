@@ -24,5 +24,5 @@ for (container in
   }
 }
 } catch (UnknownHostException exception) {
-  println "FIXME: compile without internet connection"
+  println "FIXME: compiled without internet connection"
 }

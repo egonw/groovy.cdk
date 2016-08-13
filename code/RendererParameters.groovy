@@ -14,13 +14,14 @@ import org.openscience.cdk.templates.*;
 
 
 
-IMolecule triazole = MoleculeFactory.make123Triazole();
+IAtomContainer triazole = MoleculeFactory.make123Triazole();
 StructureDiagramGenerator sdg = new StructureDiagramGenerator();
 sdg.setMolecule(triazole);
 sdg.generateCoordinates();
 triazole = sdg.getMolecule();
 // generators make the image elements
-List<IGenerator> generators = new ArrayList<IGenerator>();
+List<IGenerator> generators =
+  new ArrayList<IGenerator>();
 generators.add(new BasicSceneGenerator());
 generators.add(new BasicBondGenerator());
 generators.add(new BasicAtomGenerator());
